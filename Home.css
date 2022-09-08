@@ -2174,6 +2174,7 @@
   }
 } .u-section-7 {
   background-image: none;
+  min-height: 465px;
 }
 
 .u-section-7 .u-layout-wrap-1 {
@@ -2196,7 +2197,7 @@
 }
 
 .u-section-7 .u-layout-cell-2 {
-  min-height: 321px;
+  min-height: 402px;
 }
 
 .u-section-7 .u-container-layout-2 {
@@ -2205,6 +2206,8 @@
 
 .u-section-7 .u-group-1 {
   width: 580px;
+  height: auto;
+  min-height: 106px;
   margin: 30px auto 0 30px;
 }
 
@@ -2242,7 +2245,7 @@
 .u-section-7 .u-text-1 {
   font-weight: 700;
   font-size: 0.75rem;
-  margin: 30px 112px 0 30px;
+  margin: 52px 112px 0 30px;
 }
 
 .u-section-7 .u-text-2 {
@@ -2287,6 +2290,7 @@
     margin-right: initial;
     margin-left: initial;
     width: auto;
+    height: auto;
   }
 
   .u-section-7 .u-image-2 {
