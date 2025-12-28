@@ -1,0 +1,21 @@
+[
+  {
+    "title": "The Second BARN Challenge",
+    "venue": "IEEE International Conference on Robotics and Automation (ICRA), London, UK",
+    "year": "2023",
+    "image": "gallery/barn_challenge.jpg",
+    "links": {
+      "Website": "https://cs.gmu.edu/~xiao/Research/BARNChallenge/BARNChallenge23.html",
+      "Results": "https://ieeexplore.ieee.org/document/10323136"
+    }
+  },
+  {
+    "title": "Workshop on Metrology for Agriculture and Forestry (MetroAgriFor)",
+    "venue": "IEEE International Workshop, Trento, Italy",
+    "year": "2020",
+    "image": "gallery/metroagrifor.jpg",
+    "links": {
+      "Paper": "https://ieeexplore.ieee.org/document/9304892"
+    }
+  }
+]
