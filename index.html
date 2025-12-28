@@ -76,22 +76,22 @@
 
         section { max-width: 900px; margin: 40px auto; padding: 0 20px; }
         
-        /* Titoli Sezioni */
+        /* Section Titles */
         h2 { border-bottom: 1px solid #bbb; padding-bottom: 6px; color: #444; font-size: 1.4rem; margin-top: 50px; margin-bottom: 20px; }
         
-        /* Sottotitoli Sezioni (es. Journals) */
+        /* Subtitles Sections (e.g. Journals) */
         h3.sub-section { color: #555; border-left: 4px solid var(--accent); padding-left: 10px; margin-top: 30px; margin-bottom: 15px; font-size: 0.95rem; text-transform: uppercase; background: #f4f4f4; padding: 5px 10px; }
 
-        /* Stile per i contenuti Markdown (News, Education, Academia, ecc.) */
+        /* Style for Markdown content (News, Education, Academia, etc.) */
         #news-content, #education-content, #academia-content, #teaching-content, #service-content, #contact-content {
             font-size: 0.92rem;
             color: #444;
         }
 
-        /* Spaziatura tra i punti elenco nei Markdown */
+        /* Spacing between bullet points in Markdown */
         section ul li, section p { margin-bottom: 12px; }
 
-        /* LAYOUT COMPATTO PAPER & WORKSHOP */
+        /* LAYOUT PAPER & WORKSHOP */
         .item-row {
             display: flex;
             gap: 15px;
@@ -100,15 +100,15 @@
         }
 
         .item-row img {
-            width: 65px; 
-            height: 65px;
+            width: 50px; 
+            height: 50px;
             object-fit: cover;
             border-radius: 4px;
             flex-shrink: 0;
             border: 1px solid #eee;
         }
 
-        /* Se l'immagine manca (src vuota), la nascondiamo per pulizia */
+        /* If the image is missing (empty src), we hide it for cleanup */
         .item-row img[src=""], .item-row img:not([src]) { display: none; }
 
         .item-text { display: flex; flex-direction: column; justify-content: center; }
@@ -139,7 +139,7 @@
             <h1>Giuseppe Sutera Ph.D.</h1>
             <p>
                 <a class="lab-link" href="https://www.dieei.unict.it/faculty/giuseppe.sutera">Assistant Professor</a> |
-                <a class="lab-link" href="https://rosysgroup.github.io/">RoSys Group</a><br>
+                <a class="lab-link" href="https://rosysgroup.github.io/">RoSys Group</a> - 
                 <a class="lab-link" href="https://www.dieei.unict.it/en">University of Catania</a>
             </p>
             <div class="social-links">
@@ -263,3 +263,4 @@
 </script>
 </body>
 </html>
+
