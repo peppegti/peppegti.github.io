@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeppeGTI – Website</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    
+    <!-- Markdown parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #222;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background-color: #e5e5e5;
+            color: #222;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .header-main {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Profile image forced to LEFT */
+        .profile {
+            width: 200px;
+            height: 120px;
+            object-fit: cover;
+            border: 3px solid #BEBEBE;
+            border-radius: 4px;
+        }
+
+        .header-text {
+            text-align: left;
+        }
+
+        .header-text h1 {
+            margin: 0;
+            font-size: 2.4rem;
+            color: #444;
+        }
+
+        .header-text p {
+            margin: 6px 0 12px;
+            font-size: 1.15rem;
+            font-weight: 500;
+        }
+
+        .lab-link {
+            color: #444;
+            text-decoration: none;
+        }
+
+        .lab-link:hover {
+            text-decoration: underline;
+        }
+
+        .social-links a {
+            margin-right: 10px;
+        }
+
+        .social-links img {
+            width: 20px;
+            height: 20px;
+            filter: grayscale(100%);
+            opacity: 0.85;
+            transition: opacity 0.2s;
+        }
+
+        .social-links img:hover {
+            opacity: 1;
+        }
+
+        /* Lab logo forced to RIGHT */
+        .logo-lab {
+            width: 95px;
+            height: 95px;
+            object-fit: contain;
+            border: 2px solid #BEBEBE;
+            border-radius: 6px;
+        }
+
+        /* ===== BIO ===== */
+        .short-bio {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #f0f0f0;
+            color: #555;
+            padding: 20px;
+            border-radius: 4px;
+            font-style: italic;
+            text-align: justify;
+        }
+
+        /* ===== NAV ===== */
+        nav {
+            text-align: center;
+            background-color: #d9d9d9;
+            padding: 12px 0;
+        }
+
+        nav a {
+            color: #222;
+            margin: 0 18px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #555;
+            text-decoration: underline;
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #666;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 6px;
+        }
+
+        article {
+            background-color: #FFF;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+
+        /* ===== PAPERS ===== */
+        .paper-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            background-color: #FFF;
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+        }
+
+        .paper-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .paper-item .paper-text {
+            flex: 1;
+        }
+
+        .paper-item .paper-text h3 {
+            margin: 0 0 6px 0;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .paper-item .paper-text p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* ===== GALLERY ===== */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 220px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 18px;
+            background-color: #d9d9d9;
+            color: #222;
+            font-size: 0.9rem;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-main">
+        <a href="https://www.tuosito.it" target="_blank">
+            <img src="assets/profile.jpg" alt="Profile Photo" class="profile">
+        </a>
+
+        <div class="header-text">
+            <h1>PeppeGTI</h1>
+            <p>
+                Assistant Professor – Computer Science & AI
+                <a href="https://www.labwebsite.com" target="_blank" class="lab-link">Lab</a>
+            </p>
+            <div class="social-links">
+                <a href="mailto:email@domain.com"><img src="icons/email.svg"></a>
+                <a href="https://github.com/peppegti"><img src="icons/github.svg"></a>
+                <a href="https://linkedin.com/in/tuoprofilo"><img src="icons/linkedin.svg"></a>
+                <a href="https://scholar.google.com/..."><img src="icons/google-scholar.svg"></a>
+                <a href="https://orcid.org/..."><img src="icons/orcid.svg"></a>
+                <a href="https://twitter.com/..."><img src="icons/twitter.svg"></a>
+                <a href="https://instagram.com/..."><img src="icons/instagram.svg"></a>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://www.labwebsite.com" target="_blank">
+        <img src="assets/lab_logo.png" alt="Lab Logo" class="logo-lab">
+    </a>
+</header>
+
+<div class="short-bio">
+    <p>Dr. Giuseppe Sutera (Peppe GTI) obtained his Ph.D. in 2022 and conducts research in robotics in collaboration with the RoSys Group at the Department of Electrical, Electronic and Computer Engineering (DIEEI), University of Catania. His work focuses on autonomous multi-robot systems, including both terrestrial and aerial platforms, capable of navigating environments, executing pre-defined missions, and collaborating to achieve tasks beyond the capabilities of a single robot.</p>
+
+    <p>He received his M.Sc. in Automation Engineering and Control of Complex Systems from the University of Catania in 2018, with a thesis on an unmanned air vehicle for radioactive waste inspection, and his B.Sc. in Telematic Engineering from Kore University of Enna in 2014, with a thesis on the research, design, and development of an autonomous PowerPC processor on Xilinx ML507.</p>
+
+    <p>He has participated in the Mohamed Bin Zayed International Robotics Challenge (MBZIRC) in 2017 and 2020, achieving fourth and eighth place with his team, and attended the IEEE RAS Summer School on Multi-Robot Systems at the Czech Technical University in 2019.</p>
+
+    <p><strong>Research interests:</strong><br>
+    Development and construction of robots and UAVs, Robotics, 3D printing, AutoCAD.</p>
+</div>
+
+<nav>
+    <a href="#news">News</a>
+    <a href="#papers">Papers</a>
+    <a href="#projects">Projects</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="news">
+    <h2>News</h2>
+    <div id="news-content">Loading...</div>
+</section>
+
+<section id="papers">
+    <h2>Papers</h2>
+    <div id="papers-content">Loading...</div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div id="projects-content">Loading...</div>
+</section>
+
+<section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery" id="gallery-content">Loading...</div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div id="contact-content">Loading...</div>
+</section>
+
+<footer>
+    © 2025 Peppe GTI – All rights reserved.
+</footer>
+
+<script>
+async function loadMarkdown(targetId, file) {
+    const response = await fetch(file);
+    if (response.ok) {
+        const text = await response.text();
+        document.getElementById(targetId).innerHTML = marked.parse(text);
+    } else {
+        document.getElementById(targetId).innerHTML = "Error loading content.";
+    }
+}
+
+async function loadPapersMarkdown(file) {
+    const response = await fetch(file);
+    if (response.ok) {
+        const text = await response.text();
+        const entries = text.split(/\n{2,}/);
+        const container = document.getElementById("papers-content");
+        container.innerHTML = '';
+
+        for (let i = 0; i < entries.length; i += 2) {
+            const imgLine = entries[i].trim();
+            const titleLine = entries[i + 1] ? entries[i + 1].trim() : '';
+            const descLine = entries[i + 2] ? entries[i + 2].trim() : '';
+
+            const imgMatch = imgLine.match(/!\[.*?\]\((.*?)\)/);
+            const imgSrc = imgMatch ? imgMatch[1] : '';
+
+            const titleMatch = titleLine.match(/###\s+(.*)/);
+            const titleText = titleMatch ? titleMatch[1] : '';
+
+            const descHTML = descLine.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+
+            const paperDiv = document.createElement('div');
+            paperDiv.className = 'paper-item';
+            paperDiv.innerHTML = `
+                <img src="${imgSrc}" alt="${titleText} thumbnail">
+                <div class="paper-text">
+                    <h3>${titleText}</h3>
+                    <p>${descHTML}</p>
+                </div>
+            `;
+            container.appendChild(paperDiv);
+        }
+    } else {
+        document.getElementById("papers-content").innerHTML = "Error loading papers.";
+    }
+}
+
+// Load sections
+loadMarkdown("news-content", "content/news.md");
+loadMarkdown("projects-content", "content/projects.md");
+loadMarkdown("contact-content", "content/contact.md");
+loadMarkdown("gallery-content", "content/gallery.md");
+loadPapersMarkdown("content/papers.md");
+</script>
+
+</body>
+</html>
