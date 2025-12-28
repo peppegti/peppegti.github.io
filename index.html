@@ -1,166 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PeppeGTi – Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giuseppe Sutera Ph.D. – Website</title>
 
-<link rel="icon" href="gs.ico">
+    <link rel="icon" type="image/x-icon" href="icons/gs.ico">
 
-<style>
-body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    background-color: #f9f9f9;
-    color: #222;
-}
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-/* ===== HEADER ===== */
-header {
-    background-color: #f0f0f0;
-    padding: 20px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-.header-main { display:flex; align-items:center; gap:20px; }
-.profile { width:200px; height:200px; object-fit:cover; border:3px solid #f0f0f0; border-radius:4px; }
-.header-text h1 { margin:0; font-size:2.4rem; color:#444; }
-.header-text p { margin:6px 0 12px; font-size:1.15rem; font-weight:500; }
-.lab-link { color:#444; text-decoration:none; }
-.lab-link:hover { text-decoration:underline; }
-.social-links a img { width:20px; height:20px; filter:grayscale(100%); opacity:0.85; transition:0.2s; }
-.social-links a img:hover { opacity:1; }
-.logo-lab { width:300px; height:150px; object-fit:contain; border:2px solid #f0f0f0; border-radius:6px; }
+    <style>
+        :root {
+            --bg-color: #fcfcfc;
+            --header-bg: #f0f0f0;
+            --nav-bg: #e0e0e0;
+            --text-main: #333;
+            --text-muted: #666;
+            --accent-color: #0056b3;
+        }
 
-/* ===== BIO ===== */
-.short-bio { max-width:900px; margin:20px auto; background-color:#f0f0f0; color:#555; padding:20px; border-radius:4px; font-style:italic; text-align:justify; }
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+        }
 
-/* ===== NAV ===== */
-nav { max-width:1100px; margin:0 auto; text-align:center; background-color:#d9d9d9; padding:12px 0; border-radius:0 0 6px 6px; }
-nav a { color:#222; margin:0 18px; text-decoration:none; font-weight:bold; }
-nav a:hover { color:#555; text-decoration:underline; }
+        /* HEADER */
+        header {
+            background-color: var(--header-bg);
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-bottom: 1px solid #ddd;
+        }
 
-/* ===== SECTIONS ===== */
-section { max-width:900px; margin:30px auto; padding:0 20px; }
-h2 { color:#666; border-bottom:2px solid #ccc; padding-bottom:6px; }
+        .header-main {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
 
-/* ===== PAPERS ===== */
-.paper-item { display:flex; align-items:flex-start; gap:15px; margin-bottom:20px; background-color:#FFF; padding:10px; border-radius:6px; box-shadow:0 2px 5px rgba(0,0,0,0.08); }
-.paper-item img { width:80px; height:80px; object-fit:cover; border-radius:4px; flex-shrink:0; }
-.paper-item .paper-text { flex:1; }
-.paper-item .paper-text p { margin:0; font-size:0.95rem; color:#555; }
-.paper-item .paper-text a { text-decoration:none; color:#007acc; }
-.paper-item .paper-text a:hover { text-decoration:underline; }
+        .profile {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
 
-/* ===== FOOTER ===== */
-footer { text-align:center; padding:18px; background-color:#d9d9d9; color:#222; font-size:0.9rem; margin-top:50px; }
-</style>
+        .header-text h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            color: #222;
+        }
+
+        .header-text p {
+            margin: 8px 0 15px;
+            font-size: 1.1rem;
+        }
+
+        .lab-link {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .lab-link:hover { text-decoration: underline; }
+
+        /* SOCIAL LINKS */
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            transition: transform 0.2s;
+        }
+
+        .social-links a:hover { transform: scale(1.15); }
+
+        .social-links img {
+            width: 24px;
+            height: 24px;
+            opacity: 0.8;
+        }
+
+        .logo-lab {
+            width: 220px;
+            max-height: 120px;
+            object-fit: contain;
+        }
+
+        /* NAVIGATION */
+        nav {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--nav-bg);
+            text-align: center;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #ccc;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+            color: #444;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover { color: var(--accent-color); }
+
+        /* SECTIONS */
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #bbb;
+            padding-bottom: 8px;
+            color: #444;
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+        }
+
+        /* PAPERS LAYOUT (TIPO XIAO) */
+        .paper-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            align-items: flex-start;
+        }
+
+        .paper-item img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 4px;
+            flex-shrink: 0;
+            border: 1px solid #eee;
+        }
+
+        .paper-text h3 {
+            margin: 0 0 5px;
+            font-size: 1.15rem;
+            color: #222;
+        }
+
+        .pub-authors { margin: 0; font-size: 0.95rem; }
+        .pub-venue { margin: 4px 0 10px; font-size: 0.9rem; color: var(--text-muted); font-style: italic; }
+
+        .pub-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin-right: 12px;
+            font-weight: bold;
+        }
+
+        .pub-links a:hover { text-decoration: underline; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--header-bg);
+            margin-top: 60px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            .header-main { flex-direction: column; }
+            .logo-lab { display: none; }
+            .paper-item { flex-direction: column; align-items: center; text-align: center; }
+        }
+    </style>
 </head>
+
 <body>
 
 <header>
-  <div class="header-main">
-    <a href="https://peppegti.github.io/" target="_blank">
-      <img src="gallery/google.jpg" alt="Profile Photo" class="profile">
-    </a>
-    <div class="header-text">
-      <h1>Giuseppe Sutera Ph.D.</h1>
-      <p>
-        <a href="https://www.dieei.unict.it/faculty/giuseppe.sutera" target="_blank" class="lab-link">Assistant Professor</a> | 
-        <a href="https://rosysgroup.github.io/" target="_blank" class="lab-link">RoSys Group</a> - 
-        <a href="https://www.dieei.unict.it/en" target="_blank" class="lab-link">University of Catania</a>
-      </p>
-      <div class="social-links">
-        <a href="mailto:giuseppe.sutera@unict.it"><img src="icons/email.png"></a>
-        <a href="https://github.com/peppegti"><img src="icons/github.png"></a>
-        <a href="https://www.linkedin.com/in/giuseppesutera/?originalSubdomain=it"><img src="icons/linkedin.png"></a>
-        <a href="https://scholar.google.it/citations?user=ZBhhWt0AAAAJ&hl=it"><img src="icons/gs.png"></a>
-        <a href="https://orcid.org/0000-0001-6424-6286"><img src="icons/orcid.png"></a>
-        <a href="https://www.instagram.com/ingsuteragiuseppe/"><img src="icons/instagram.png"></a>
-      </div>
+    <div class="header-main">
+        <img src="gallery/google.jpg" class="profile" alt="Giuseppe Sutera">
+        <div class="header-text">
+            <h1>Giuseppe Sutera Ph.D.</h1>
+            <p>
+                <a class="lab-link" href="https://www.dieei.unict.it/faculty/giuseppe.sutera">Assistant Professor</a> |
+                <a class="lab-link" href="https://rosysgroup.github.io/">RoSys Group</a><br>
+                <a class="lab-link" href="https://www.dieei.unict.it/en">University of Catania</a>
+            </p>
+            <div class="social-links">
+                <a href="mailto:giuseppe.sutera@unict.it"><img src="icons/email.png" title="Email"></a>
+                <a href="https://github.com/tuo-username" target="_blank"><img src="icons/github.png" title="GitHub"></a>
+                <a href="https://linkedin.com/in/tuo-profilo" target="_blank"><img src="icons/linkedin.png" title="LinkedIn"></a>
+                <a href="https://scholar.google.com/..." target="_blank"><img src="icons/gs.png" title="Google Scholar"></a>
+                <a href="https://orcid.org/..." target="_blank"><img src="icons/orcid.png" title="ORCID"></a>
+            </div>
+        </div>
     </div>
-  </div>
-  <a href="https://rosysgroup.github.io/" target="_blank">
-    <img src="gallery/RoSys.png" alt="Lab Logo" class="logo-lab">
-  </a>
+    <img src="gallery/RoSys.png" class="logo-lab" alt="RoSys Lab Logo">
 </header>
 
 <nav>
-  <a href="#news">News</a>
-  <a href="#publications">Publications</a>
-  <a href="#projects">Projects</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#contact">Contact</a>
+    <a href="#news">News</a>
+    <a href="#papers">Publications</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-<div class="short-bio">
-<p>Dr. Giuseppe Sutera obtained his Ph.D. in 2022 and conducts research in robotics with the RoSys Group at DIEEI, University of Catania.</p>
-</div>
-
 <section id="news">
-  <h2>News</h2>
-  <div id="news-content"></div>
+    <h2>News</h2>
+    <div id="news-content">Loading news...</div>
 </section>
 
-<section id="publications">
-  <h2>Publications</h2>
-  <div id="papers-content"></div>
+<section id="papers">
+    <h2>Publications</h2>
+    <div id="papers-content">Loading publications...</div>
 </section>
 
 <section id="projects">
-  <h2>Projects</h2>
-  <div id="projects-content"></div>
-</section>
-
-<section id="gallery">
-  <h2>Gallery</h2>
-  <div class="gallery" id="gallery-content"></div>
+    <h2>Projects</h2>
+    <div id="projects-content">Loading projects...</div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <div id="contact-content"></div>
+    <h2>Contact</h2>
+    <div id="contact-content">Loading contact info...</div>
 </section>
 
 <footer>
-  © 2025 Peppe GTI – All rights reserved.
+    &copy; 2025 Giuseppe Sutera – All rights reserved.
 </footer>
 
-<!-- Import del file papers.js -->
-<script src="content/papers.js"></script>
-
 <script>
-// Funzione per renderizzare i papers
-function renderPapers() {
-  const container = document.getElementById("papers-content");
-  container.innerHTML = "";
-
-  papers.forEach(paper => {
-    const div = document.createElement("div");
-    div.className = "paper-item";
-
-    let html = `
-      <img src="${paper.img}" alt="Paper thumbnail">
-      <div class="paper-text">
-        <p>${paper.authors}</p>
-        <p><a href="${paper.link}" target="_blank">${paper.title}</a></p>
-    `;
-    if(paper.video){
-      html += `<p><a href="${paper.video}" target="_blank">Video</a></p>`;
-    }
-    html += "</div>";
-    div.innerHTML = html;
-    container.appendChild(div);
-  });
+// Carica sezioni Markdown semplici
+async function loadMarkdown(id, file) {
+    try {
+        const r = await fetch(file);
+        if (r.ok) {
+            const text = await r.text();
+            document.getElementById(id).innerHTML = marked.parse(text);
+        }
+    } catch (e) { console.error("Error loading " + file, e); }
 }
 
-// Render iniziale
-renderPapers();
+// Carica Pubblicazioni da JSON
+async function loadPapers() {
+    try {
+        const r = await fetch('content/papers.json');
+        if (!r.ok) return;
+        const papers = await r.json();
+        const container = document.getElementById("papers-content");
+        container.innerHTML = "";
+
+        papers.forEach(paper => {
+            const linksHtml = Object.entries(paper.links)
+                .map(([label, url]) => `<a href="${url}" target="_blank">[${label}]</a>`)
+                .join("");
+
+            container.innerHTML += `
+                <div class="paper-item">
+                    <img src="${paper.image}" onerror="this.src='icons/gs.png'">
+                    <div class="paper-text">
+                        <h3>${paper.title}</h3>
+                        <p class="pub-authors">${paper.authors}</p>
+                        <p class="pub-venue">${paper.venue}</p>
+                        <div class="pub-links">${linksHtml}</div>
+                    </div>
+                </div>`;
+        });
+    } catch (e) { console.error("Error loading papers", e); }
+}
+
+// Esecuzione
+loadMarkdown("news-content", "content/news.md");
+loadMarkdown("projects-content", "content/projects.md");
+loadMarkdown("contact-content", "content/contact.md");
+loadPapers();
 </script>
 
 </body>
 </html>
-
