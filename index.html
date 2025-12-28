@@ -129,24 +129,10 @@ footer { text-align:center; padding:18px; background-color:#d9d9d9; color:#222; 
   © 2025 Peppe GTI – All rights reserved.
 </footer>
 
-<script>
-// Array di papers
-const papers = [
-  {
-    title: "Design and Experimental Validation of a 3D-Printed Two-Finger Gripper",
-    link: "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:5nxA0vEk-isC",
-    authors: "M Habibi, G Sutera, DC Guastella, G Muscato",
-    img: "gallery/paper/no_image_paper.png",
-    video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-  },
-  {
-    title: "Adaptive Navigation of a Smart Walker with Shared Control",
-    link: "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:0EnyYjriUFMC",
-    authors: "G Sutera, DC Guastella, F Cancelliere, G Muscato",
-    img: "gallery/paper/no_image_paper.png"
-  }
-];
+<!-- Import del file papers.js -->
+<script src="content/papers.js"></script>
 
+<script>
 // Funzione per renderizzare i papers
 function renderPapers() {
   const container = document.getElementById("papers-content");
@@ -177,3 +163,4 @@ renderPapers();
 
 </body>
 </html>
+
