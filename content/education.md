@@ -1,7 +1,6 @@
-* **Ph.D. in Systems, Energy, Computer and Telecommunications Engineering** (2022)
-  University of Catania, Italy
-  *Thesis: Advanced Control and Navigation for Autonomous Robots*
-* **Master of Science in Automation and Control Engineering** (2018)
-  University of Catania, Italy
-* **Bachelor of Science in Computer and Automation Engineering** (2015)
-  University of Catania, Italy
+* **Ph. D. - Control methodologies for robotic multi-platforms** (2019 - 2022)<br>
+University of Catania - Catania, Italy
+* **M. Degree - Automation engineering and control of complex system** (2015 - 2018)<br>
+University of Catania - Catania, Italy
+* **B. Degree - Telematics engineering** (2007 - 2014)<br>
+University of UniKore - Enna, Italy
