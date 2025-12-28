@@ -6,3 +6,8 @@ M Habibi, G Sutera, DC Guastella, G Muscato
 ![Paper](gallery/paper/no_image_paper.png)
 G Sutera, DC Guastella, F Cancelliere, G Muscato
 [Adaptive Navigation of a Smart Walker with Shared Control](https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:0EnyYjriUFMC)
+
+
+![Paper](gallery/paper/no_image_paper.png)
+G Sutera, DC Guastella, F Cancelliere, G Muscato
+[Adaptive Navigation of a Smart Walker with Shared Control](https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:0EnyYjriUFMC)
