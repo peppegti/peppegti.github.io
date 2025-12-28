@@ -1,178 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PeppeGTi – Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PeppeGTi – Website</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="icons/gs.ico">
+<!-- Favicon -->
+<link rel="icon" href="gs.ico">
 
-    <!-- Markdown parser -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<!-- Markdown parser -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-    <style>
-        body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            background-color: #f9f9f9;
-            color: #222;
-        }
+<style>
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #222;
+}
 
-        header {
-            background-color: #e5e5e5;
-            padding: 20px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+/* ===== HEADER ===== */
+header {
+    background-color: #f0f0f0;
+    color: #222;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
 
-        .header-main {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+.header-main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
-        .profile {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 4px;
-        }
+.profile {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid #e5e5e5;
+    border-radius: 4px;
+}
 
-        .header-text h1 {
-            margin: 0;
-            font-size: 2.4rem;
-            color: #444;
-        }
+.header-text {
+    text-align: left;
+}
 
-        .header-text p {
-            margin: 6px 0 12px;
-            font-size: 1.15rem;
-        }
+.header-text h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    color: #444;
+}
 
-        .lab-link {
-            color: #444;
-            text-decoration: none;
-        }
+.header-text p {
+    margin: 6px 0 12px;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
 
-        .lab-link:hover {
-            text-decoration: underline;
-        }
+.lab-link {
+    color: #444;
+    text-decoration: none;
+}
 
-        .social-links img {
-            width: 20px;
-            margin-right: 10px;
-            opacity: 0.8;
-        }
+.lab-link:hover {
+    text-decoration: underline;
+}
 
-        .logo-lab {
-            width: 300px;
-            height: 150px;
-            object-fit: contain;
-        }
+.social-links a {
+    margin-right: 10px;
+}
 
-        nav {
-            max-width: 1100px;
-            margin: 0 auto;
-            background-color: #d9d9d9;
-            text-align: center;
-            padding: 12px 0;
-        }
+.social-links img {
+    width: 20px;
+    height: 20px;
+    filter: grayscale(100%);
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
 
-        nav a {
-            margin: 0 18px;
-            text-decoration: none;
-            font-weight: bold;
-            color: #222;
-        }
+.social-links img:hover {
+    opacity: 1;
+}
 
-        section {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
+.logo-lab {
+    width: 300px;
+    height: 150px;
+    object-fit: contain;
+    border: 2px solid #e5e5e5;
+    border-radius: 6px;
+}
 
-        h2 {
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 6px;
-            color: #666;
-        }
+/* ===== BIO ===== */
+.short-bio {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 20px;
+    border-radius: 4px;
+    font-style: italic;
+    text-align: justify;
+}
 
-        /* ===== PAPERS ===== */
-        .paper-item {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
-            background: #fff;
-            padding: 12px;
-            border-radius: 6px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-        }
+/* ===== NAV ===== */
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #d9d9d9;
+    padding: 12px 0;
+    border-radius: 0 0 6px 6px;
+}
 
-        .paper-item img {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 4px;
-            flex-shrink: 0;
-        }
+nav a {
+    color: #222;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .paper-text h3 {
-            margin: 0 0 6px;
-            font-size: 1.1rem;
-            color: #444;
-        }
+nav a:hover {
+    color: #555;
+    text-decoration: underline;
+}
 
-        .paper-text p {
-            margin: 0;
-            font-size: 0.95rem;
-            color: #555;
-        }
+/* ===== SECTIONS ===== */
+section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
 
-        footer {
-            text-align: center;
-            padding: 18px;
-            background-color: #d9d9d9;
-            margin-top: 50px;
-        }
-    </style>
+h2 {
+    color: #666;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 6px;
+}
+
+article {
+    background-color: #FFF;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* ===== PAPERS ===== */
+.paper-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    background-color: #FFF;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.paper-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.paper-item .paper-text {
+    flex: 1;
+}
+
+.paper-item .paper-text h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.paper-item .paper-text p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 18px;
+    background-color: #d9d9d9;
+    color: #222;
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
+</style>
 </head>
-
 <body>
 
 <header>
     <div class="header-main">
-        <img src="gallery/google.jpg" class="profile">
+        <a href="https://peppegti.github.io/" target="_blank">
+            <img src="gallery/google.jpg" alt="Profile Photo" class="profile">
+        </a>
+
         <div class="header-text">
             <h1>Giuseppe Sutera Ph.D.</h1>
             <p>
-                <a class="lab-link" href="https://www.dieei.unict.it/faculty/giuseppe.sutera">Assistant Professor</a> |
-                <a class="lab-link" href="https://rosysgroup.github.io/">RoSys Group</a> –
-                <a class="lab-link" href="https://www.dieei.unict.it/en">University of Catania</a>
+                <a href="https://www.dieei.unict.it/faculty/giuseppe.sutera" target="_blank" class="lab-link">Assistant Professor</a> | 
+                <a href="https://rosysgroup.github.io/" target="_blank" class="lab-link">RoSys Group</a> - 
+                <a href="https://www.dieei.unict.it/en" target="_blank" class="lab-link">University of Catania</a>
             </p>
             <div class="social-links">
-                <img src="icons/email.png">
-                <img src="icons/github.png">
-                <img src="icons/linkedin.png">
-                <img src="icons/gs.png">
-                <img src="icons/orcid.png">
-                <img src="icons/instagram.png">
+                <a href="mailto:giuseppe.sutera@unict.it"><img src="icons/email.png"></a>
+                <a href="https://github.com/peppegti"><img src="icons/github.png"></a>
+                <a href="https://www.linkedin.com/in/giuseppesutera/?originalSubdomain=it"><img src="icons/linkedin.png"></a>
+                <a href="https://scholar.google.it/citations?user=ZBhhWt0AAAAJ&hl=it"><img src="icons/gs.png"></a>
+                <a href="https://orcid.org/0000-0001-6424-6286"><img src="icons/orcid.png"></a>
+                <a href="https://www.instagram.com/ingsuteragiuseppe/"><img src="icons/instagram.png"></a>
             </div>
         </div>
     </div>
 
-    <img src="gallery/RoSys.png" class="logo-lab">
+    <a href="https://rosysgroup.github.io/" target="_blank">
+        <img src="gallery/RoSys.png" alt="Lab Logo" class="logo-lab">
+    </a>
 </header>
 
 <nav>
     <a href="#news">News</a>
     <a href="#papers">Papers</a>
     <a href="#projects">Projects</a>
+    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
 </nav>
+
+<div class="short-bio">
+<p>Dr. Giuseppe Sutera obtained his Ph.D. in 2022 and conducts research in robotics in collaboration with the RoSys Group at the Department of Electrical, Electronic and Computer Engineering (DIEEI), University of Catania. His work focuses on autonomous multi-robot systems, including both terrestrial and aerial platforms, capable of navigating environments, executing pre-defined missions, and collaborating to achieve tasks beyond the capabilities of a single robot.</p>
+
+<p>He received his M.Sc. in Automation Engineering and Control of Complex Systems from the University of Catania in 2018, with a thesis on an unmanned air vehicle for radioactive waste inspection, and his B.Sc. in Telematic Engineering from Kore University of Enna in 2014, with a thesis on the research, design, and development of an autonomous PowerPC processor on Xilinx ML507.</p>
+
+<p>He has participated in the Mohamed Bin Zayed International Robotics Challenge (MBZIRC) in 2017 and 2020, achieving fourth and eighth place with his team, and attended the IEEE RAS Summer School on Multi-Robot Systems at the Czech Technical University in 2019.</p>
+
+<p><strong>Research interests:</strong><br>
+Development and construction of robots and UAVs, Robotics, 3D printing, CAD.</p>
+</div>
 
 <section id="news">
     <h2>News</h2>
@@ -189,6 +282,11 @@
     <div id="projects-content">Loading...</div>
 </section>
 
+<section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery" id="gallery-content">Loading...</div>
+</section>
+
 <section id="contact">
     <h2>Contact</h2>
     <div id="contact-content">Loading...</div>
@@ -199,39 +297,54 @@
 </footer>
 
 <script>
-async function loadMarkdown(id, file) {
-    const r = await fetch(file);
-    if (r.ok) document.getElementById(id).innerHTML = marked.parse(await r.text());
-}
-
-async function loadPapersMarkdown(file) {
-    const r = await fetch(file);
-    if (!r.ok) return;
-
-    const text = await r.text();
-    const blocks = text.trim().split(/\n\s*\n/);
-    const container = document.getElementById("papers-content");
-    container.innerHTML = "";
-
-    for (let i = 0; i < blocks.length; i += 3) {
-        const img = blocks[i].match(/\((.*?)\)/)?.[1] || "";
-        const title = blocks[i + 1].replace(/^###\s*/, "");
-        const desc = marked.parse(blocks[i + 2]);
-
-        container.innerHTML += `
-            <div class="paper-item">
-                <img src="${img}">
-                <div class="paper-text">
-                    <h3>${title}</h3>
-                    ${desc}
-                </div>
-            </div>`;
+async function loadMarkdown(targetId, file) {
+    const response = await fetch(file);
+    if (response.ok) {
+        const text = await response.text();
+        document.getElementById(targetId).innerHTML = marked.parse(text);
+    } else {
+        document.getElementById(targetId).innerHTML = "Error loading content.";
     }
 }
 
+async function loadPapersMarkdown(file) {
+    const response = await fetch(file);
+    if (response.ok) {
+        const text = await response.text();
+        const entries = text.split(/\n{2,}/).filter(e => e.trim() !== '');
+        const container = document.getElementById("papers-content");
+        container.innerHTML = '';
+
+        for (let i = 0; i < entries.length; i += 3) {
+            const imgLine = entries[i].trim();
+            const titleLine = entries[i + 1] ? entries[i + 1].trim() : '';
+            const authorsLine = entries[i + 2] ? entries[i + 2].trim() : '';
+
+            const imgMatch = imgLine.match(/!\[.*?\]\((.*?)\)/);
+            const imgSrc = imgMatch ? imgMatch[1] : '';
+
+            const mdText = `${titleLine}\n${authorsLine}`;
+
+            const paperDiv = document.createElement('div');
+            paperDiv.className = 'paper-item';
+            paperDiv.innerHTML = `
+                <img src="${imgSrc}" alt="Paper thumbnail">
+                <div class="paper-text">
+                    ${marked.parse(mdText)}
+                </div>
+            `;
+            container.appendChild(paperDiv);
+        }
+    } else {
+        document.getElementById("papers-content").innerHTML = "Error loading papers.";
+    }
+}
+
+// Load sections
 loadMarkdown("news-content", "content/news.md");
 loadMarkdown("projects-content", "content/projects.md");
 loadMarkdown("contact-content", "content/contact.md");
+loadMarkdown("gallery-content", "content/gallery.md");
 loadPapersMarkdown("content/papers.md");
 </script>
 
