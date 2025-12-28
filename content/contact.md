@@ -1,5 +1,7 @@
 # Contact
 
-- **Email:** [email@domain.com](mailto:email@domain.com)
+- **Email:** [giuseppe.sutera@unict.it](mailto:giuseppe.sutera@unict.it)
 - **GitHub:** [https://github.com/peppegti](https://github.com/peppegti)
-- **LinkedIn:** [https://linkedin.com/in/tuoprofilo](https://linkedin.com/in/tuoprofilo)
+- **LinkedIn:** [https://www.linkedin.com/in/giuseppesutera/](https://www.linkedin.com/in/giuseppesutera/)
+
+
