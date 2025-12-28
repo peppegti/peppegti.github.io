@@ -5,7 +5,7 @@
     "authors": "M. Habibi, G. Sutera, D.C. Guastella, G. Muscato",
     "venue": "Robotics, 2025",
     "image": "gallery/paper/gripper_habibi.png",
-    "links": { "PDF": "#" }
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:5nxA0vEk-isC" }
   },
   {
     "type": "journal",
@@ -13,15 +13,15 @@
     "authors": "G. Sutera, D. C. Guastella, F. Cancelliere, G. Muscato",
     "venue": "Actuators, 2025",
     "image": "gallery/paper/active_walker.png",
-    "links": { "PDF": "#" }
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:0EnyYjriUFMC" }
   },
   {
     "type": "conference",
     "title": "Multi-UAV Coverage Path Planning for Agricultural Applications",
     "authors": "M. Frau, D. C. Guastella, G. Muscato, G. Sutera",
     "venue": "Climbing and Walking Robots Conference (CLAWAR), 2024",
-    "image": "icons/gs.png",
-    "links": { "PDF": "#" }
+    "image": "gallery/gs.png",
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:roLk4NBRz8UC" }
   },
   {
     "type": "conference",
@@ -29,7 +29,7 @@
     "authors": "D. C. Guastella, G. Sutera, G. Muscato",
     "venue": "AIP Conference Proceedings, 2024",
     "image": "gallery/aip2024.jpg",
-    "links": { "PDF": "#" }
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:_FxGoFyzp5QC" }
   },
   {
     "type": "conference",
@@ -37,7 +37,7 @@
     "authors": "D. C. Guastella, G. Sutera, G. Giudice, D. Longo, G. Muscato",
     "venue": "International Conference on Unmanned Aircraft Systems (ICUAS), 2024",
     "image": "gallery/volcano_drone.jpg",
-    "links": { "PDF": "#" }
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:LkGwnXOMwfcC" }
   },
   {
     "type": "conference",
@@ -45,7 +45,7 @@
     "authors": "S. Palazzo, D. C. Guastella, G. Vecchio, R. E. Sarpietro, G. Sutera, et al.",
     "venue": "European Robotics Forum (ERF), 2024",
     "image": "gallery/erf2024.jpg",
-    "links": { "PDF": "#" }
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:hqOjcs7Dif8C" }
   },
   {
     "type": "conference",
@@ -53,7 +53,7 @@
     "authors": "F. Cancelliere, L. Reitano, D. C. Guastella, G. Sutera, C. Spampinato, G. Muscato",
     "venue": "European Robotics Forum (ERF), 2024",
     "image": "gallery/sandro.jpg",
-    "links": { "PDF": "#" }
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:UebtZRa9Y70C" }
   },
   {
     "type": "conference",
@@ -61,7 +61,7 @@
     "authors": "G. Sutera, D. C. Guastella, G. Muscato",
     "venue": "International Symposium on Measurements and Control in Robotics (ISMCR), 2023",
     "image": "gallery/gripper2023.jpg",
-    "links": { "PDF": "#" }
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:WF5omc3nYNoC" }
   },
   {
     "type": "journal",
@@ -69,7 +69,7 @@
     "authors": "G. Cicceri, D. C. Guastella, G. Sutera, F. Cancelliere, et al.",
     "venue": "IEEE Access, 2023",
     "image": "gallery/bioblu.jpg",
-    "links": { "PDF": "#" }
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:eQOLeE2rZwMC" }
   },
   {
     "type": "journal",
@@ -77,7 +77,7 @@
     "authors": "A. Borgese, D. C. Guastella, G. Sutera, G. Muscato",
     "venue": "IEEE Robotics and Automation Letters (RA-L), 2022",
     "image": "gallery/tether.jpg",
-    "links": { "PDF": "#" }
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:Y0pCki6q_DkC" }
   },
   {
     "type": "conference",
@@ -85,7 +85,7 @@
     "authors": "A. Borgese, D. C. Guastella, G. Sutera, A. Biondo, G. Muscato",
     "venue": "Climbing and Walking Robots Conference (CLAWAR), 2022",
     "image": "gallery/walker2022.jpg",
-    "links": { "PDF": "#" }
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:W7OEmFMy1HYC" }
   },
   {
     "type": "conference",
@@ -93,7 +93,7 @@
     "authors": "S. Battiato, L. Cantelli, G. Muscato, G. Sutera, et al.",
     "venue": "MBZIRC Symposium, 2020",
     "image": "gallery/mbzirc.jpg",
-    "links": { "PDF": "#" }
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:YsMSGLbcyi4C" }
   },
   {
     "type": "journal",
@@ -101,7 +101,7 @@
     "authors": "G. Sutera, D. C. Guastella, G. Muscato",
     "venue": "ACTA IMEKO, 2021",
     "image": "gallery/acta2021.jpg",
-    "links": { "PDF": "#" }
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:IjCSPb-OGe4C" }
   },
   {
     "type": "conference",
@@ -109,6 +109,14 @@
     "authors": "G. Sutera, A. Borgese, D. C. Guastella, L. Cantelli, G. Muscato",
     "venue": "ISMCR, 2020",
     "image": "gallery/thermal.jpg",
-    "links": { "PDF": "#" }
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:9yKSN-GCB0IC" }
+  },
+  {
+    "type": "conference",
+    "title": "A vision-based coordination control for a uav-ugv tethered system",
+    "authors": "G. Sutera, A. Borgese, D.C. Guastella, G. Muscato",
+    "venue": "I-RIM, 2020",
+    "image": "gallery/thermal.jpg",
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:d1gkVwhDpl0C" }
   }
 ]
