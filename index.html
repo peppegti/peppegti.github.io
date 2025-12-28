@@ -11,17 +11,20 @@
             --bg: #fcfcfc;
             --header: #f0f0f0;
             --nav: #e0e0e0;
-            --accent: #0056b3;
+            --accent: #004494; /* Blu più profondo per leggibilità */
             --text: #333;
             --muted: #666;
         }
+
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             margin: 0;
             background-color: var(--bg);
             color: var(--text);
-            line-height: 1.1;
+            line-height: 1.5;
+            font-size: 0.92rem; /* Uniformato a dimensione paper */
         }
 
         header {
@@ -38,11 +41,13 @@
         .header-main { display: flex; align-items: center; gap: 25px; }
         .profile { width: 160px; height: 160px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         .header-text h1 { margin: 0; font-size: 2rem; color: #222; }
-        .header-text p { margin: 5px 0 10px; font-size: 1.05rem; }
-        .lab-link { color: var(--accent); text-decoration: none; }
-        .social-links { display: flex; gap: 10px; }
+        .header-text p { margin: 5px 0 10px; font-size: 1rem; }
+        .lab-link { color: var(--accent); text-decoration: none; font-weight: 500; }
+        .lab-link:hover { text-decoration: underline; }
+
+        .social-links { display: flex; gap: 12px; margin-top: 10px; }
         .social-links img { width: 22px; height: 22px; opacity: 0.8; transition: transform 0.2s; }
-        .social-links a:hover img { transform: scale(1.2); opacity: 1; }
+        .social-links a:hover img { transform: scale(1.15); opacity: 1; }
         .logo-lab { width: 180px; max-height: 100px; object-fit: contain; }
 
         nav {
@@ -58,49 +63,70 @@
         }
 
         nav a {
-            margin: 0 12px;
+            margin: 0 10px;
             text-decoration: none;
             font-weight: bold;
             color: #444;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         nav a:hover { color: var(--accent); }
 
-        section { max-width: 900px; margin: 30px auto; padding: 0 20px; }
-        h2 { border-bottom: 1px solid #bbb; padding-bottom: 5px; color: #444; font-size: 1.5rem; margin-top: 35px; }
-        h3.sub-section { color: #555; border-left: 4px solid var(--accent); padding-left: 10px; margin-top: 25px; font-size: 1.1rem; text-transform: uppercase; background: #f4f4f4; padding: 4px 10px; }
+        section { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        
+        /* Titoli Sezioni */
+        h2 { border-bottom: 1px solid #bbb; padding-bottom: 6px; color: #444; font-size: 1.4rem; margin-top: 50px; margin-bottom: 20px; }
+        
+        /* Sottotitoli Sezioni (es. Journals) */
+        h3.sub-section { color: #555; border-left: 4px solid var(--accent); padding-left: 10px; margin-top: 30px; margin-bottom: 15px; font-size: 0.95rem; text-transform: uppercase; background: #f4f4f4; padding: 5px 10px; }
 
+        /* Stile per i contenuti Markdown (News, Education, Academia, ecc.) */
+        #news-content, #education-content, #academia-content, #teaching-content, #service-content, #contact-content {
+            font-size: 0.92rem;
+            color: #444;
+        }
+
+        /* Spaziatura tra i punti elenco nei Markdown */
+        section ul li, section p { margin-bottom: 12px; }
+
+        /* LAYOUT COMPATTO PAPER & WORKSHOP */
         .item-row {
             display: flex;
             gap: 15px;
-            margin-bottom: 18px;
+            margin-bottom: 15px;
             align-items: center;
         }
 
         .item-row img {
-            width: 60px; 
-            height: 60px;
+            width: 65px; 
+            height: 65px;
             object-fit: cover;
             border-radius: 4px;
             flex-shrink: 0;
             border: 1px solid #eee;
         }
 
-        .item-text h4 { margin: 0; font-size: 0.95rem; color: #222; display: inline-block; }
-        .pub-details { margin: 2px 0 0 0; font-size: 0.82rem; color: #555; }
+        /* Se l'immagine manca (src vuota), la nascondiamo per pulizia */
+        .item-row img[src=""], .item-row img:not([src]) { display: none; }
+
+        .item-text { display: flex; flex-direction: column; justify-content: center; }
+        .item-text h4 { margin: 0; font-size: 0.95rem; color: #222; line-height: 1.2; }
+        .pub-details { margin: 2px 0 0 0; font-size: 0.85rem; color: #555; line-height: 1.3; }
         .pub-links { display: inline; margin-left: 5px; }
-        .pub-links a { color: var(--accent); text-decoration: none; font-size: 0.78rem; margin-right: 5px; font-weight: normal; }
+        .pub-links a { color: var(--accent); text-decoration: none; font-size: 0.8rem; margin-right: 6px; }
         .pub-links a:hover { text-decoration: underline; }
 
-        footer { text-align: center; padding: 25px; background-color: var(--header); margin-top: 50px; font-size: 0.8rem; color: var(--muted); }
+        footer { text-align: center; padding: 30px; background-color: var(--header); margin-top: 60px; font-size: 0.8rem; color: var(--muted); border-top: 1px solid #ddd; }
 
         @media (max-width: 768px) {
-            header { flex-direction: column; text-align: center; }
+            header { flex-direction: column; text-align: center; padding: 20px; }
             .logo-lab { display: none; }
             .item-row { align-items: flex-start; }
+            nav { overflow-x: auto; white-space: nowrap; }
             nav a { margin: 0 5px; font-size: 0.7rem; }
+            section { margin: 25px auto; }
         }
     </style>
 </head>
@@ -113,7 +139,7 @@
             <h1>Giuseppe Sutera Ph.D.</h1>
             <p>
                 <a class="lab-link" href="https://www.dieei.unict.it/faculty/giuseppe.sutera">Assistant Professor</a> |
-                <a class="lab-link" href="https://rosysgroup.github.io/">RoSys Group</a> - 
+                <a class="lab-link" href="https://rosysgroup.github.io/">RoSys Group</a><br>
                 <a class="lab-link" href="https://www.dieei.unict.it/en">University of Catania</a>
             </p>
             <div class="social-links">
@@ -150,7 +176,7 @@
 </section>
 
 <section id="workshops">
-    <h2>Workshops</h2>
+    <h2>Workshops & Sessions</h2>
     <div id="workshops-content"></div>
 </section>
 
@@ -158,7 +184,7 @@
 <section id="service"><h2>Service</h2><div id="service-content"></div></section>
 <section id="contact"><h2>Contact</h2><div id="contact-content"></div></section>
 
-<footer>&copy; 2025 PeppeGTi – All rights reserved.</footer>
+<footer>&copy; 2025 Giuseppe Sutera – All rights reserved.</footer>
 
 <script>
     async function loadMD(id, file) {
@@ -168,7 +194,7 @@
                 const text = await r.text();
                 document.getElementById(id).innerHTML = marked.parse(text);
             }
-        } catch (e) { console.error(e); }
+        } catch (e) { console.error("Error loading MD:", file); }
     }
 
     async function loadPapers() {
@@ -181,21 +207,26 @@
 
             papers.forEach(p => {
                 const container = document.getElementById(categories[p.type]);
-                if(!container) return; // Salta se è un workshop (caricato separatamente)
+                if(!container) return;
                 
-                const linksHtml = Object.entries(p.links).map(([l, u]) => `<a href="${u}" target="_blank">[${l}]</a>`).join(" ");
-                const authorsFormatted = p.authors.replace("G. Sutera", "<strong>G. Sutera</strong>");
+                const linksHtml = Object.entries(p.links).map(([l, u]) => `<a href="${u}" target="_blank">[${l}]</a>`).join("");
+                
+                // Grassetto flessibile per il nome
+                let authorsFormatted = p.authors
+                    .replace("G. Sutera", "<strong>G. Sutera</strong>")
+                    .replace("Giuseppe Sutera", "<strong>Giuseppe Sutera</strong>")
+                    .replace("Sutera, Giuseppe", "<strong>Sutera, Giuseppe</strong>");
 
                 container.innerHTML += `
                     <div class="item-row">
-                        <img src="${p.image}" onerror="this.src='icons/gs.png'">
+                        <img src="${p.image}" onerror="this.style.display='none'">
                         <div class="item-text">
                             <h4>${p.title} - <span class="pub-links">${linksHtml}</span></h4>
                             <p class="pub-details">${authorsFormatted} - <em>${p.venue}</em></p>
                         </div>
                     </div>`;
             });
-        } catch (e) { console.error(e); }
+        } catch (e) { console.error("Error loading Papers"); }
     }
 
     async function loadWorkshops() {
@@ -207,19 +238,20 @@
             container.innerHTML = "";
 
             workshops.forEach(w => {
-                const linksHtml = Object.entries(w.links).map(([l, u]) => `<a href="${u}" target="_blank">[${l}]</a>`).join(" ");
+                const linksHtml = Object.entries(w.links || {}).map(([l, u]) => `<a href="${u}" target="_blank">[${l}]</a>`).join("");
                 container.innerHTML += `
                     <div class="item-row">
-                        <img src="${w.image}" onerror="this.src='icons/gs.png'">
+                        <img src="${w.image}" onerror="this.style.display='none'">
                         <div class="item-text">
                             <h4>${w.title} - <span class="pub-links">${linksHtml}</span></h4>
                             <p class="pub-details">${w.venue} (${w.year})</p>
                         </div>
                     </div>`;
             });
-        } catch (e) { console.error(e); }
+        } catch (e) { console.error("Error loading Workshops"); }
     }
 
+    // Esecuzione
     loadMD("news-content", "content/news.md");
     loadMD("education-content", "content/education.md");
     loadMD("academia-content", "content/academia.md");
@@ -231,5 +263,3 @@
 </script>
 </body>
 </html>
-
-
