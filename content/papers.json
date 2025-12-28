@@ -1,26 +1,106 @@
 [
   {
-    "type": "journal",
-    "title": "A Cloud-Based Architecture for Social Devices",
-    "authors": "D. C. Guastella, G. Sutera, G. Muscato",
-    "venue": "Journal of Intelligent & Robotic Systems, 2021",
-    "image": "gallery/social_devices.jpg",
-    "links": { "PDF": "https://..." }
+    "type": "conference",
+    "title": "Adaptive Navigation of a Smart Walker with Shared Control",
+    "authors": "G. Sutera, D. C. Guastella, F. Cancelliere, G. Muscato",
+    "venue": "Actuators, 2025",
+    "image": "gallery/walker2025.jpg",
+    "links": { "PDF": "#" }
   },
   {
     "type": "conference",
-    "title": "Design of a Multi-Purpose Ground Robot for Agricultural Applications",
-    "authors": "G. Sutera, D. C. Guastella, G. Muscato",
-    "venue": "IEEE MetroAgriFor, 2020",
-    "image": "gallery/ground_robot.jpg",
-    "links": { "PDF": "https://..." }
+    "title": "Multi-UAV Coverage Path Planning for Agricultural Applications",
+    "authors": "M. Frau, D. C. Guastella, G. Muscato, G. Sutera",
+    "venue": "Climbing and Walking Robots Conference (CLAWAR), 2024",
+    "image": "gallery/uav_agri.jpg",
+    "links": { "PDF": "#" }
   },
   {
-    "type": "workshop",
-    "title": "VertiAdaptor: Online Kinodynamics Adaptation",
-    "authors": "T. Xu, C. Pan, A. Datar, and G. Sutera",
-    "venue": "Preprint, 2025",
-    "image": "gallery/vertiadaptor.jpg",
-    "links": { "PDF": "https://..." }
+    "type": "conference",
+    "title": "Optimized coverage path planning with a team of multi-rotors for environment reconstruction",
+    "authors": "D. C. Guastella, G. Sutera, G. Muscato",
+    "venue": "AIP Conference Proceedings, 2024",
+    "image": "gallery/aip2024.jpg",
+    "links": { "PDF": "#" }
+  },
+  {
+    "type": "conference",
+    "title": "Drone-assisted Remote Gas Sensing in Volcanic Scenarios",
+    "authors": "D. C. Guastella, G. Sutera, G. Giudice, D. Longo, G. Muscato",
+    "venue": "International Conference on Unmanned Aircraft Systems (ICUAS), 2024",
+    "image": "gallery/volcano_drone.jpg",
+    "links": { "PDF": "#" }
+  },
+  {
+    "type": "conference",
+    "title": "Learning-Based Ground Vehicle Navigation in Outdoor Unstructured Environments",
+    "authors": "S. Palazzo, D. C. Guastella, G. Vecchio, R. E. Sarpietro, G. Sutera, et al.",
+    "venue": "European Robotics Forum (ERF), 2024",
+    "image": "gallery/erf2024.jpg",
+    "links": { "PDF": "#" }
+  },
+  {
+    "type": "conference",
+    "title": "SandRo, a Robot for Beach Waste Cleanup",
+    "authors": "F. Cancelliere, L. Reitano, D. C. Guastella, G. Sutera, C. Spampinato, G. Muscato",
+    "venue": "European Robotics Forum (ERF), 2024",
+    "image": "gallery/sandro.jpg",
+    "links": { "PDF": "#" }
+  },
+  {
+    "type": "conference",
+    "title": "A Fast-Acting Gripper for Aerial Vehicles",
+    "authors": "G. Sutera, D. C. Guastella, G. Muscato",
+    "venue": "International Symposium on Measurements and Control in Robotics (ISMCR), 2023",
+    "image": "gallery/gripper2023.jpg",
+    "links": { "PDF": "#" }
+  },
+  {
+    "type": "journal",
+    "title": "An intelligent hierarchical cyber-physical system for beach waste management: the bioblu case study",
+    "authors": "G. Cicceri, D. C. Guastella, G. Sutera, F. Cancelliere, et al.",
+    "venue": "IEEE Access, 2023",
+    "image": "gallery/bioblu.jpg",
+    "links": { "PDF": "#" }
+  },
+  {
+    "type": "journal",
+    "title": "Tether-based localization for cooperative ground and aerial vehicles",
+    "authors": "A. Borgese, D. C. Guastella, G. Sutera, G. Muscato",
+    "venue": "IEEE Robotics and Automation Letters (RA-L), 2022",
+    "image": "gallery/tether.jpg",
+    "links": { "PDF": "#" }
+  },
+  {
+    "type": "conference",
+    "title": "Adaptive navigation control of an active smart walker",
+    "authors": "A. Borgese, D. C. Guastella, G. Sutera, A. Biondo, G. Muscato",
+    "venue": "Climbing and Walking Robots Conference (CLAWAR), 2022",
+    "image": "gallery/walker2022.jpg",
+    "links": { "PDF": "#" }
+  },
+  {
+    "type": "conference",
+    "title": "The UNICT-TEAM vision modules for the Mohamed Bin Zayed International Robotics Challenge 2020",
+    "authors": "S. Battiato, L. Cantelli, G. Muscato, G. Sutera, et al.",
+    "venue": "MBZIRC Symposium, 2020",
+    "image": "gallery/mbzirc.jpg",
+    "links": { "PDF": "#" }
+  },
+  {
+    "type": "journal",
+    "title": "A lightweight magnetic gripper for an aerial delivery vehicle: design and applications",
+    "authors": "G. Sutera, D. C. Guastella, G. Muscato",
+    "venue": "ACTA IMEKO, 2021",
+    "image": "gallery/acta2021.jpg",
+    "links": { "PDF": "#" }
+  },
+  {
+    "type": "conference",
+    "title": "A Multi-Robot System for Thermal Vision Inspection",
+    "authors": "G. Sutera, A. Borgese, D. C. Guastella, L. Cantelli, G. Muscato",
+    "venue": "ISMCR, 2020",
+    "image": "gallery/thermal.jpg",
+    "links": { "PDF": "#" }
   }
 ]
