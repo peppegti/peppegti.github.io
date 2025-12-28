@@ -45,10 +45,6 @@ header {
     border-radius: 4px;
 }
 
-.header-text {
-    text-align: left;
-}
-
 .header-text h1 {
     margin: 0;
     font-size: 2.4rem;
@@ -70,11 +66,7 @@ header {
     text-decoration: underline;
 }
 
-.social-links a {
-    margin-right: 10px;
-}
-
-.social-links img {
+.social-links a img {
     width: 20px;
     height: 20px;
     filter: grayscale(100%);
@@ -82,7 +74,7 @@ header {
     transition: opacity 0.2s;
 }
 
-.social-links img:hover {
+.social-links a img:hover {
     opacity: 1;
 }
 
@@ -258,95 +250,22 @@ footer {
 
 <div class="short-bio">
 <p>Dr. Giuseppe Sutera obtained his Ph.D. in 2022 and conducts research in robotics in collaboration with the RoSys Group at the Department of Electrical, Electronic and Computer Engineering (DIEEI), University of Catania. His work focuses on autonomous multi-robot systems, including both terrestrial and aerial platforms, capable of navigating environments, executing pre-defined missions, and collaborating to achieve tasks beyond the capabilities of a single robot.</p>
-
-<p>He received his M.Sc. in Automation Engineering and Control of Complex Systems from the University of Catania in 2018, with a thesis on an unmanned air vehicle for radioactive waste inspection, and his B.Sc. in Telematic Engineering from Kore University of Enna in 2014, with a thesis on the research, design, and development of an autonomous PowerPC processor on Xilinx ML507.</p>
-
-<p>He has participated in the Mohamed Bin Zayed International Robotics Challenge (MBZIRC) in 2017 and 2020, achieving fourth and eighth place with his team, and attended the IEEE RAS Summer School on Multi-Robot Systems at the Czech Technical University in 2019.</p>
-
-<p><strong>Research interests:</strong><br>
-Development and construction of robots and UAVs, Robotics, 3D printing, CAD.</p>
 </div>
 
 <section id="news">
     <h2>News</h2>
-    <div id="news-content">Loading...</div>
+    <div id="news-content"></div>
 </section>
 
 <section id="papers">
     <h2>Papers</h2>
-    <div id="papers-content">Loading...</div>
+    <div id="papers-content"></div>
 </section>
 
 <section id="projects">
     <h2>Projects</h2>
-    <div id="projects-content">Loading...</div>
+    <div id="projects-content"></div>
 </section>
 
 <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery" id="gallery-content">Loading...</div>
-</section>
-
-<section id="contact">
-    <h2>Contact</h2>
-    <div id="contact-content">Loading...</div>
-</section>
-
-<footer>
-    © 2025 Peppe GTI – All rights reserved.
-</footer>
-
-<script>
-async function loadMarkdown(targetId, file) {
-    const response = await fetch(file);
-    if (response.ok) {
-        const text = await response.text();
-        document.getElementById(targetId).innerHTML = marked.parse(text);
-    } else {
-        document.getElementById(targetId).innerHTML = "Error loading content.";
-    }
-}
-
-async function loadPapersMarkdown(file) {
-    const response = await fetch(file);
-    if (response.ok) {
-        const text = await response.text();
-        const entries = text.split(/\n{2,}/).filter(e => e.trim() !== '');
-        const container = document.getElementById("papers-content");
-        container.innerHTML = '';
-
-        for (let i = 0; i < entries.length; i += 3) {
-            const imgLine = entries[i].trim();
-            const titleLine = entries[i + 1] ? entries[i + 1].trim() : '';
-            const authorsLine = entries[i + 2] ? entries[i + 2].trim() : '';
-
-            const imgMatch = imgLine.match(/!\[.*?\]\((.*?)\)/);
-            const imgSrc = imgMatch ? imgMatch[1] : '';
-
-            const mdText = `${titleLine}\n${authorsLine}`;
-
-            const paperDiv = document.createElement('div');
-            paperDiv.className = 'paper-item';
-            paperDiv.innerHTML = `
-                <img src="${imgSrc}" alt="Paper thumbnail">
-                <div class="paper-text">
-                    ${marked.parse(mdText)}
-                </div>
-            `;
-            container.appendChild(paperDiv);
-        }
-    } else {
-        document.getElementById("papers-content").innerHTML = "Error loading papers.";
-    }
-}
-
-// Load sections
-loadMarkdown("news-content", "content/news.md");
-loadMarkdown("projects-content", "content/projects.md");
-loadMarkdown("contact-content", "content/contact.md");
-loadMarkdown("gallery-content", "content/gallery.md");
-loadPapersMarkdown("content/papers.md");
-</script>
-
-</body>
-</html>
+    <h2>
