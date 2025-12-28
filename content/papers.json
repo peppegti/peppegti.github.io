@@ -1,0 +1,48 @@
+[
+  {
+    "title": "VertiAdaptor: Online Kinodynamics Adaptation for Vertically Challenging Terrain",
+    "authors": "T. Xu, C. Pan, A. Datar, and G. Sutera",
+    "venue": "Preprint, 2025",
+    "image": "gallery/vertiadaptor.jpg",
+    "links": {
+      "PDF": "https://arxiv.org/abs/2501.01511"
+    }
+  },
+  {
+    "title": "Autonomous Ground Navigation in Highly Constrained Spaces: Lessons Learned from The Second BARN Challenge at ICRA 2023",
+    "authors": "X. Xiao, Z. Xu, G. Warnell, P. Stone, G. Sutera, et al.",
+    "venue": "IEEE Robotics & Automation Magazine (RAM), 2023",
+    "image": "gallery/papers/barn2023.jpg",
+    "links": {
+      "PDF": "https://ieeexplore.ieee.org/document/10323136",
+      "Website": "https://cs.gmu.edu/~xiao/Research/BARNChallenge/BARNChallenge23.html"
+    }
+  },
+  {
+    "title": "A Cloud-Based Architecture for Social Devices",
+    "authors": "D. C. Guastella, G. Sutera, G. Muscato",
+    "venue": "Journal of Intelligent & Robotic Systems, 2021",
+    "image": "gallery/papers/social_devices.jpg",
+    "links": {
+      "PDF": "https://link.springer.com/article/10.1007/s10846-021-01366-y"
+    }
+  },
+  {
+    "title": "A Comparison of Navigation Algorithms for Mobile Robots in Agricultural Scenarios",
+    "authors": "D. C. Guastella, L. Cantelli, G. Sutera, C. D. Melita, G. Muscato",
+    "venue": "International Conference on Computer Aided Systems Theory, 2019",
+    "image": "gallery/papers/agri_robots.jpg",
+    "links": {
+      "PDF": "https://link.springer.com/chapter/10.1007/978-3-030-45096-0_49"
+    }
+  },
+  {
+    "title": "Design of a Multi-Purpose Ground Robot for Agricultural Applications",
+    "authors": "G. Sutera, D. C. Guastella, G. Muscato",
+    "venue": "IEEE International Workshop on Metrology for Agriculture and Forestry, 2020",
+    "image": "gallery/papers/ground_robot.jpg",
+    "links": {
+      "PDF": "https://ieeexplore.ieee.org/document/9304892"
+    }
+  }
+]
