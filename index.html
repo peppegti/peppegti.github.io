@@ -72,12 +72,11 @@
         h2 { border-bottom: 1px solid #bbb; padding-bottom: 5px; color: #444; font-size: 1.5rem; margin-top: 35px; }
         h3.sub-section { color: #555; border-left: 4px solid var(--accent); padding-left: 10px; margin-top: 25px; font-size: 1.1rem; text-transform: uppercase; background: #f4f4f4; padding: 4px 10px; }
 
-        /* NUOVO LAYOUT COMPATTO */
         .item-row {
             display: flex;
             gap: 15px;
             margin-bottom: 18px;
-            align-items: center; /* Centra l'immagine rispetto alle due righe di testo */
+            align-items: center;
         }
 
         .item-row img {
@@ -114,15 +113,15 @@
             <h1>Giuseppe Sutera Ph.D.</h1>
             <p>
                 <a class="lab-link" href="https://www.dieei.unict.it/faculty/giuseppe.sutera">Assistant Professor</a> |
-                <a class="lab-link" href="https://rosysgroup.github.io/">RoSys Group</a><br>
-                University of Catania
+                <a class="lab-link" href="https://rosysgroup.github.io/">RoSys Group</a> - 
+                <a class="lab-link" href="https://www.dieei.unict.it/en">University of Catania</a>
             </p>
             <div class="social-links">
                 <a href="mailto:giuseppe.sutera@unict.it"><img src="icons/email.png" title="Email"></a>
                 <a href="https://github.com/PeppeGTi" target="_blank"><img src="icons/github.png" title="GitHub"></a>
                 <a href="https://linkedin.com/in/giuseppe-sutera" target="_blank"><img src="icons/linkedin.png" title="LinkedIn"></a>
                 <a href="https://scholar.google.it/citations?user=ZBhhWt0AAAAJ" target="_blank"><img src="icons/gs.png" title="Google Scholar"></a>
-                <a href="https://orcid.org/0000-0002-3932-901X" target="_blank"><img src="icons/orcid.png" title="ORCID"></a>
+                <a href="https://orcid.org/0000-0001-6424-6286" target="_blank"><img src="icons/orcid.png" title="ORCID"></a>
             </div>
         </div>
     </div>
@@ -134,6 +133,7 @@
     <a href="#education">Education</a>
     <a href="#academia">Academia</a>
     <a href="#publications">Publications</a>
+    <a href="#workshops">Workshops</a>
     <a href="#teaching">Teaching</a>
     <a href="#service">Service</a>
     <a href="#contact">Contact</a>
@@ -147,14 +147,18 @@
     <h2>Publications</h2>
     <h3 class="sub-section">Journals</h3><div id="journal-content"></div>
     <h3 class="sub-section">Conferences</h3><div id="conference-content"></div>
-    <h3 class="sub-section">Workshops, Symposiums & Preprints</h3><div id="workshop-content"></div>
+</section>
+
+<section id="workshops">
+    <h2>Workshops</h2>
+    <div id="workshops-content"></div>
 </section>
 
 <section id="teaching"><h2>Teaching</h2><div id="teaching-content"></div></section>
 <section id="service"><h2>Service</h2><div id="service-content"></div></section>
 <section id="contact"><h2>Contact</h2><div id="contact-content"></div></section>
 
-<footer>&copy; 2025 Giuseppe Sutera – University of Catania</footer>
+<footer>&copy; 2025 PeppeGTi – All rights reserved.</footer>
 
 <script>
     async function loadMD(id, file) {
@@ -172,19 +176,14 @@
             const r = await fetch('content/papers.json');
             if (!r.ok) return;
             const papers = await r.json();
-            
-            const categories = { journal: 'journal-content', conference: 'conference-content', workshop: 'workshop-content' };
+            const categories = { journal: 'journal-content', conference: 'conference-content' };
             Object.values(categories).forEach(id => document.getElementById(id).innerHTML = "");
 
             papers.forEach(p => {
-                const container = document.getElementById(categories[p.type] || 'workshop-content');
+                const container = document.getElementById(categories[p.type]);
+                if(!container) return; // Salta se è un workshop (caricato separatamente)
                 
-                // Formatta i link: [PDF] [Video] ecc.
-                const linksHtml = Object.entries(p.links)
-                    .map(([label, url]) => `<a href="${url}" target="_blank">[${label}]</a>`)
-                    .join(" ");
-
-                // Mette in grassetto il tuo nome automaticamente
+                const linksHtml = Object.entries(p.links).map(([l, u]) => `<a href="${u}" target="_blank">[${l}]</a>`).join(" ");
                 const authorsFormatted = p.authors.replace("G. Sutera", "<strong>G. Sutera</strong>");
 
                 container.innerHTML += `
@@ -199,6 +198,28 @@
         } catch (e) { console.error(e); }
     }
 
+    async function loadWorkshops() {
+        try {
+            const r = await fetch('content/workshops.json');
+            if (!r.ok) return;
+            const workshops = await r.json();
+            const container = document.getElementById("workshops-content");
+            container.innerHTML = "";
+
+            workshops.forEach(w => {
+                const linksHtml = Object.entries(w.links).map(([l, u]) => `<a href="${u}" target="_blank">[${l}]</a>`).join(" ");
+                container.innerHTML += `
+                    <div class="item-row">
+                        <img src="${w.image}" onerror="this.src='icons/gs.png'">
+                        <div class="item-text">
+                            <h4>${w.title} - <span class="pub-links">${linksHtml}</span></h4>
+                            <p class="pub-details">${w.venue} (${w.year})</p>
+                        </div>
+                    </div>`;
+            });
+        } catch (e) { console.error(e); }
+    }
+
     loadMD("news-content", "content/news.md");
     loadMD("education-content", "content/education.md");
     loadMD("academia-content", "content/academia.md");
@@ -206,6 +227,7 @@
     loadMD("service-content", "content/service.md");
     loadMD("contact-content", "content/contact.md");
     loadPapers();
+    loadWorkshops();
 </script>
 </body>
 </html>
