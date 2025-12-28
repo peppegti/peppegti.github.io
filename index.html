@@ -111,18 +111,21 @@
 
         /* ===== NAV ===== */
         nav {
+            max-width: 1100px;   /* stessa larghezza dell'header */
+            margin: 0 auto;      /* centrata orizzontalmente */
             text-align: center;
             background-color: #d9d9d9;
             padding: 12px 0;
+            border-radius: 0 0 6px 6px; /* arrotondamento solo in basso, opzionale */
         }
-
+        
         nav a {
             color: #222;
             margin: 0 18px;
             text-decoration: none;
             font-weight: bold;
         }
-
+        
         nav a:hover {
             color: #555;
             text-decoration: underline;
@@ -220,14 +223,6 @@
 
 <body>
 
-<nav>
-    <a href="#news">News</a>
-    <a href="#papers">Papers</a>
-    <a href="#projects">Projects</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-</nav>
-
 <header>
     <div class="header-main">
         <a href="https://peppegti.github.io/" target="_blank">
@@ -237,24 +232,32 @@
         <div class="header-text">
             <h1>Giuseppe Sutera Ph.D.</h1>
             <p>
-                Assistant Professor | RoSys Group - University of Catania
-                <a href="https://rosysgroup.github.io/" target="_blank" class="lab-link">Lab</a>
+                Assistant Professor | RoSys Group - 
+                <a href="https://www.dieei.unict.it/en" target="_blank" class="lab-link">University of Catania</a>
             </p>
             <div class="social-links">
-                <a href="mailto:email@domain.com"><img src="icons/email.png"></a>
+                <a href="mailto:giuseppe.sutera@unict.it"><img src="icons/email.png"></a>
                 <a href="https://github.com/peppegti"><img src="icons/github.png"></a>
-                <a href="https://linkedin.com/in/tuoprofilo"><img src="icons/linkedin.png"></a>
-                <a href="https://scholar.google.com/..."><img src="icons/gs.png"></a>
-                <a href="https://orcid.org/..."><img src="icons/orcid.png"></a>
-                <a href="https://instagram.com/..."><img src="icons/instagram.png"></a>
+                <a href="https://www.linkedin.com/in/giuseppesutera/?originalSubdomain=it"><img src="icons/linkedin.png"></a>
+                <a href="https://scholar.google.it/citations?user=ZBhhWt0AAAAJ&hl=it"><img src="icons/gs.png"></a>
+                <a href="https://orcid.org/0000-0001-6424-6286"><img src="icons/orcid.png"></a>
+                <a href="https://www.instagram.com/ingsuteragiuseppe/"><img src="icons/instagram.png"></a>
             </div>
         </div>
     </div>
 
-    <a href="https://www.labwebsite.com" target="_blank">
+    <a href="https://rosysgroup.github.io/" target="_blank">
         <img src="gallery/RoSys.png" alt="Lab Logo" class="logo-lab">
     </a>
 </header>
+
+<nav>
+    <a href="#news">News</a>
+    <a href="#papers">Papers</a>
+    <a href="#projects">Projects</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+</nav>
 
 <div class="short-bio">
     <p>Dr. Giuseppe Sutera obtained his Ph.D. in 2022 and conducts research in robotics in collaboration with the RoSys Group at the Department of Electrical, Electronic and Computer Engineering (DIEEI), University of Catania. His work focuses on autonomous multi-robot systems, including both terrestrial and aerial platforms, capable of navigating environments, executing pre-defined missions, and collaborating to achieve tasks beyond the capabilities of a single robot.</p>
@@ -264,7 +267,7 @@
     <p>He has participated in the Mohamed Bin Zayed International Robotics Challenge (MBZIRC) in 2017 and 2020, achieving fourth and eighth place with his team, and attended the IEEE RAS Summer School on Multi-Robot Systems at the Czech Technical University in 2019.</p>
 
     <p><strong>Research interests:</strong><br>
-    Development and construction of robots and UAVs, Robotics, 3D printing, AutoCAD.</p>
+    Development and construction of robots and UAVs, Robotics, 3D printing, CAD.</p>
 </div>
 
 <section id="news">
@@ -354,6 +357,7 @@ loadPapersMarkdown("content/papers.md");
 
 </body>
 </html>
+
 
 
 
