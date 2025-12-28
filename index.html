@@ -6,7 +6,6 @@
 <title>PeppeGTi – Website</title>
 
 <link rel="icon" href="gs.ico">
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 <style>
 body {
@@ -15,9 +14,10 @@ body {
     background-color: #f9f9f9;
     color: #222;
 }
+
+/* ===== HEADER ===== */
 header {
     background-color: #f0f0f0;
-    color: #222;
     padding: 20px 30px;
     display: flex;
     justify-content: space-between;
@@ -25,29 +25,37 @@ header {
     max-width: 1100px;
     margin: 0 auto;
 }
-.header-main { display: flex; align-items: center; gap: 20px; }
-.profile { width:200px; height:200px; object-fit:cover; border:3px solid #e5e5e5; border-radius:4px; }
+.header-main { display:flex; align-items:center; gap:20px; }
+.profile { width:200px; height:200px; object-fit:cover; border:3px solid #f0f0f0; border-radius:4px; }
 .header-text h1 { margin:0; font-size:2.4rem; color:#444; }
 .header-text p { margin:6px 0 12px; font-size:1.15rem; font-weight:500; }
 .lab-link { color:#444; text-decoration:none; }
 .lab-link:hover { text-decoration:underline; }
-.social-links a img { width:20px; height:20px; filter:grayscale(100%); opacity:0.85; transition:opacity 0.2s; }
+.social-links a img { width:20px; height:20px; filter:grayscale(100%); opacity:0.85; transition:0.2s; }
 .social-links a img:hover { opacity:1; }
-.logo-lab { width:300px; height:150px; object-fit:contain; border:2px solid #e5e5e5; border-radius:6px; }
+.logo-lab { width:300px; height:150px; object-fit:contain; border:2px solid #f0f0f0; border-radius:6px; }
+
+/* ===== BIO ===== */
 .short-bio { max-width:900px; margin:20px auto; background-color:#f0f0f0; color:#555; padding:20px; border-radius:4px; font-style:italic; text-align:justify; }
+
+/* ===== NAV ===== */
 nav { max-width:1100px; margin:0 auto; text-align:center; background-color:#d9d9d9; padding:12px 0; border-radius:0 0 6px 6px; }
 nav a { color:#222; margin:0 18px; text-decoration:none; font-weight:bold; }
 nav a:hover { color:#555; text-decoration:underline; }
+
+/* ===== SECTIONS ===== */
 section { max-width:900px; margin:30px auto; padding:0 20px; }
 h2 { color:#666; border-bottom:2px solid #ccc; padding-bottom:6px; }
+
+/* ===== PAPERS ===== */
 .paper-item { display:flex; align-items:flex-start; gap:15px; margin-bottom:20px; background-color:#FFF; padding:10px; border-radius:6px; box-shadow:0 2px 5px rgba(0,0,0,0.08); }
 .paper-item img { width:80px; height:80px; object-fit:cover; border-radius:4px; flex-shrink:0; }
 .paper-item .paper-text { flex:1; }
-.paper-item .paper-text h3 { margin:0 0 6px 0; font-size:1.1rem; color:#444; }
 .paper-item .paper-text p { margin:0; font-size:0.95rem; color:#555; }
-.gallery { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; }
-.gallery img { width:220px; height:160px; object-fit:cover; border-radius:5px; box-shadow:0 2px 5px rgba(0,0,0,0.2); transition: transform 0.2s; }
-.gallery img:hover { transform: scale(1.05); }
+.paper-item .paper-text a { text-decoration:none; color:#007acc; }
+.paper-item .paper-text a:hover { text-decoration:underline; }
+
+/* ===== FOOTER ===== */
 footer { text-align:center; padding:18px; background-color:#d9d9d9; color:#222; font-size:0.9rem; margin-top:50px; }
 </style>
 </head>
@@ -82,7 +90,7 @@ footer { text-align:center; padding:18px; background-color:#d9d9d9; color:#222; 
 
 <nav>
   <a href="#news">News</a>
-  <a href="#papers">Papers</a>
+  <a href="#publications">Publications</a>
   <a href="#projects">Projects</a>
   <a href="#gallery">Gallery</a>
   <a href="#contact">Contact</a>
@@ -97,8 +105,8 @@ footer { text-align:center; padding:18px; background-color:#d9d9d9; color:#222; 
   <div id="news-content"></div>
 </section>
 
-<section id="papers">
-  <h2>Papers</h2>
+<section id="publications">
+  <h2>Publications</h2>
   <div id="papers-content"></div>
 </section>
 
@@ -118,59 +126,54 @@ footer { text-align:center; padding:18px; background-color:#d9d9d9; color:#222; 
 </section>
 
 <footer>
-  © 2025 PeppeGTi – All rights reserved.
+  © 2025 Peppe GTI – All rights reserved.
 </footer>
 
 <script>
-async function loadMarkdown(targetId, file) {
-  const response = await fetch(file);
-  if(response.ok) {
-    const text = await response.text();
-    document.getElementById(targetId).innerHTML = marked.parse(text);
-  } else {
-    document.getElementById(targetId).innerHTML = "Error loading content.";
+// Array di papers
+const papers = [
+  {
+    title: "Design and Experimental Validation of a 3D-Printed Two-Finger Gripper",
+    link: "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:5nxA0vEk-isC",
+    authors: "M Habibi, G Sutera, DC Guastella, G Muscato",
+    img: "gallery/paper/no_image_paper.png",
+    video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  },
+  {
+    title: "Adaptive Navigation of a Smart Walker with Shared Control",
+    link: "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:0EnyYjriUFMC",
+    authors: "G Sutera, DC Guastella, F Cancelliere, G Muscato",
+    img: "gallery/paper/no_image_paper.png"
   }
-}
+];
 
-async function loadPapersMarkdown(file) {
-  const response = await fetch(file);
-  if(!response.ok) { document.getElementById("papers-content").innerHTML = "Error loading papers."; return; }
-  const text = await response.text();
-  const entries = text.split(/\n{2,}/).filter(e => e.trim() !== '');
+// Funzione per renderizzare i papers
+function renderPapers() {
   const container = document.getElementById("papers-content");
-  container.innerHTML = '';
-  for(let i=0; i<entries.length; i+=3){
-    const imgLine = entries[i].trim();
-    const titleLine = entries[i+1]?entries[i+1].trim():'';
-    const authorsLine = entries[i+2]?entries[i+2].trim():'';
-    const imgMatch = imgLine.match(/!\[.*?\]\((.*?)\)/);
-    const imgSrc = imgMatch?imgMatch[1]:'';
-    const linkMatch = authorsLine.match(/\[Paper\]\((.*?)\)/);
-    const link = linkMatch?linkMatch[1]:'#';
-    const authorsText = authorsLine.replace(/\[Paper\]\(.*?\)/,'');
-    const paperDiv = document.createElement('div');
-    paperDiv.className = 'paper-item';
-    paperDiv.innerHTML = `
-      <img src="${imgSrc}" alt="Paper thumbnail">
+  container.innerHTML = "";
+
+  papers.forEach(paper => {
+    const div = document.createElement("div");
+    div.className = "paper-item";
+
+    let html = `
+      <img src="${paper.img}" alt="Paper thumbnail">
       <div class="paper-text">
-        <h3>${titleLine}</h3>
-        <p>${authorsText}</p>
-        <p><a href="${link}" target="_blank">Read Paper</a></p>
-      </div>
+        <p>${paper.authors}</p>
+        <p><a href="${paper.link}" target="_blank">${paper.title}</a></p>
     `;
-    container.appendChild(paperDiv);
-  }
+    if(paper.video){
+      html += `<p><a href="${paper.video}" target="_blank">Video</a></p>`;
+    }
+    html += "</div>";
+    div.innerHTML = html;
+    container.appendChild(div);
+  });
 }
 
-// Caricamento
-loadMarkdown("news-content","content/news.md");
-loadMarkdown("projects-content","content/projects.md");
-loadMarkdown("contact-content","content/contact.md");
-loadMarkdown("gallery-content","content/gallery.md");
-loadMarkdown("papers.md");
+// Render iniziale
+renderPapers();
 </script>
 
 </body>
 </html>
-
-
