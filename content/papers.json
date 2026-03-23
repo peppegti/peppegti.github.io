@@ -1,4 +1,53 @@
 [
+
+  {
+    "type": "journal",
+    "title": "PostureSense: A Low-Cost Solution for Postural Monitoring",
+    "authors": "N. Cinardi, G. Sutera, D.C. Guastella, G. Muscato",
+    "venue": "Actuators, 2026",
+    "image": "gallery/paper/cinardi2026posturesense.png",
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&citation_for_view=ZBhhWt0AAAAJ:your_id_1" }
+  },
+  {
+    "type": "journal",
+    "title": "A Systematic Review of Fall Detection and Prediction Technologies for Older Adults: An Analysis of Sensor Modalities and Computational Models",
+    "authors": "M. Ishaq, D.C. Guastella, G. Sutera, G. Muscato",
+    "venue": "Applied Sciences, 2026",
+    "image": "gallery/paper/ishaq2026systematic.png",
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&citation_for_view=ZBhhWt0AAAAJ:your_id_2" }
+  },
+  {
+    "type": "journal",
+    "title": "Design and Implementation of a Ball and Beam Control System Using a PID Controller",
+    "authors": "G. Sutera, D.C. Guastella, F. Cancelliere, G. Muscato",
+    "venue": "IEEE Transactions on Education, 2026",
+    "image": "gallery/paper/sutera2026design.png",
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&citation_for_view=ZBhhWt0AAAAJ:your_id_3" }
+  },
+  {
+    "type": "conference",
+    "title": "Reinforcement Learning-Based Mapless Navigation for Ground Vehicles in Dense Forests Using 3D LiDAR",
+    "authors": "F. Cancelliere, D. Guastella, G. Sutera, S. Palazzo, G. Muscato, C. Spampinato",
+    "venue": "IEEE SSRR, 2025",
+    "image": "gallery/paper/cancelliere2025reinforcement.png",
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&citation_for_view=ZBhhWt0AAAAJ:your_id_4" }
+  },
+  {
+    "type": "conference",
+    "title": "A Quantitative Review of Smart Walkers: Trends, Gaps, and a Proposed Evaluation Framework",
+    "authors": "M. Ishaq, D.C. Guastella, G. Sutera, F. Cancelliere, G. Muscato",
+    "venue": "SIELMEN, 2025",
+    "image": "gallery/paper/ishaq2025quantitative.png",
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&citation_for_view=ZBhhWt0AAAAJ:your_id_5" }
+  },
+  {
+    "type": "conference",
+    "title": "A Sensorless Control Strategy for an Active Assistive Walker: Design, Implementation, and Experimental Validation",
+    "authors": "M. Ishaq, F. Cancelliere, G. Sutera, D.C. Guastella, G. Muscato",
+    "venue": "CoDIT, 2025",
+    "image": "gallery/paper/ishaq2025sensorless.png",
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&citation_for_view=ZBhhWt0AAAAJ:your_id_6" }
+  },  
   {
     "type": "journal",
     "title": "Design and Experimental Validation of a 3D-Printed Two-Finger Gripper with a V-Shaped Profile for Lightweight Waste Collection",
