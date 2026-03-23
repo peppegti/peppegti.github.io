@@ -2,7 +2,8 @@
 
 * **23/03/2026**: Our latest paper, **"Design and Implementation of a Ball and Beam Control System Using a PID Controller"**, has been officially published in **IEEE Transactions on Education**. 
 The work presents a comprehensive framework for the design and experimental validation of a Ball and Beam system, offering a practical approach for control systems education and research.
-    **Publication:** [IEEE Xplore - IEEE Transactions on Education](https://ieeexplore.ieee.org/abstract/document/11361191)
+
+     **Publication:** [IEEE Xplore - IEEE Transactions on Education](https://ieeexplore.ieee.org/abstract/document/11361191)
 
 <!-- 2025 -->
 
