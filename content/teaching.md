@@ -5,8 +5,8 @@
 
 ### Thesis Supervisor
 
-* **M.Sc. Students**: CARLA FINOCCHIARO - 2026 - (Design and development of a robotic knee exoskeleton for walking assistance)
-* **M.Sc. Students**: GAIA TORRISI - 2026 - (Design and control of an assistive device for knees)
+* **M.Sc. Students**: FINOCCHIARO CARLA - 2026 - (Design and development of a robotic knee exoskeleton for walking assistance)
+* **M.Sc. Students**: TORRISI GAIA - 2026 - (Design and control of an assistive device for knees)
 * **M.Sc. Students**: CINARDI NICOLETTA - 2025 - (Development of human-robot interaction methodologies for assistive robotic devices)
 * **B.Sc. Students**: IURATO PIERPAOLO - 2025 - (Controllo basato sulla visione artificiale di un sistema di sfere e travi)
 * **B.Sc. Students**: LEFOSSE GIUSEPPE - 2025 - (Costruzione braccio robotico con visione per raccolta automatizzata)
