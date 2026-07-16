@@ -26,6 +26,30 @@
   },
   {
     "type": "conference",
+    "title": "Ground Vehicle Path Planning for Garbage Collection in Beaches",
+    "authors": "G. Sutera, D.C. Guastella, G. Muscato",
+    "venue": "AIP Conference Proceedings, 2026",
+    "image": "gallery/paper/sutera2026ground.png",
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&citation_for_view=ZBhhWt0AAAAJ:_kc_bZDykSQC" }
+  },
+  {
+    "type": "conference",
+    "title": "Distributed Control and Emerging Behaviour in a Microrobot Team",
+    "authors": "M.R. Saladdino, G. Sutera, D. Guastella, L.V. Gambuzza",
+    "venue": "IEEE 23rd International Multi-Conference on Systems, Signals & Devices (SSD), 2026",
+    "image": "gallery/paper/saladdino2026distributed.png",
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&citation_for_view=ZBhhWt0AAAAJ:M3ejUd6NZC8C" }
+  },
+  {
+    "type": "conference",
+    "title": "Blending User Intent and Obstacle Avoidance Through Artificial Potential Fields",
+    "authors": "M. Ishaq, D. Guastella, G. Sutera, G. Muscato",
+    "venue": "IEEE 23rd International Multi-Conference on Systems, Signals & Devices (SSD), 2026",
+    "image": "gallery/paper/ishaq2026blending.png",
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&citation_for_view=ZBhhWt0AAAAJ:4TOpqqG69KYC" }
+  },
+  {
+    "type": "conference",
     "title": "Reinforcement Learning-Based Mapless Navigation for Ground Vehicles in Dense Forests Using 3D LiDAR",
     "authors": "F. Cancelliere, D. Guastella, G. Sutera, S. Palazzo, G. Muscato, C. Spampinato",
     "venue": "IEEE SSRR, 2025",
@@ -167,5 +191,13 @@
     "venue": "I-RIM, 2020",
     "image": "gallery/thermal.jpg",
     "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&sortby=pubdate&citation_for_view=ZBhhWt0AAAAJ:d1gkVwhDpl0C" }
+  },
+  {
+    "type": "conference",
+    "title": "A Novel Design of a Lightweight Magnetic Plate for a Delivery Drone",
+    "authors": "G. Sutera, D.C. Guastella, G. Muscato",
+    "venue": "ISMCR, 2020",
+    "image": "gallery/paper/sutera2020plate.png",
+    "links": { "PDF": "https://scholar.google.it/citations?view_op=view_citation&hl=it&user=ZBhhWt0AAAAJ&citation_for_view=ZBhhWt0AAAAJ:u-x6o8ySG0sC" }
   }
 ]
