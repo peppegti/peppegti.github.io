@@ -1,4 +1,6 @@
-* **Assistant Professor (RTDa)** (Jun 2023 - Present)<br>
+* **Assistant Professor (RTT)** (2026 - Present)<br>
+  Kore University of Enna, Italy
+* **Assistant Professor (RTDa)** (Jun 2023 - 2026)<br>
   Department of Electrical, Electronics and Computer Engineering (DIEEI)
   University of Catania, Italy
 * **Robotic Systems Group** (Nov 2020 - Present)<br>

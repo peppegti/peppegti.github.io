@@ -1,6 +1,10 @@
+### Kore University of Enna
+
+* **Automatic controls** - Assistant Professor, 2026 - Present
+
 ### University of Catania
 
-* **Automatic controls** - Assistant Professor, 2023 - Present
+* **Automatic controls** - Assistant Professor, 2023 - 2026
 * **Laboratory of Robotics** - Qualified tutor of student projects
 
 ### Thesis Supervisor

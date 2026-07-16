@@ -4,8 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giuseppe Sutera Ph.D. – Academic Homepage</title>
+    <meta name="description" content="Giuseppe Sutera, Ph.D. – Assistant Professor at Kore University of Enna &amp; RoSys Group. Research in robotics, UAV, multi-robot systems and assistive devices.">
+    <link rel="canonical" href="https://peppegti.github.io/">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Giuseppe Sutera Ph.D. – Academic Homepage">
+    <meta property="og:description" content="Assistant Professor at Kore University of Enna &amp; RoSys Group. Research in robotics, UAV, multi-robot systems and assistive devices.">
+    <meta property="og:image" content="https://peppegti.github.io/gallery/google.jpg">
+    <meta property="og:url" content="https://peppegti.github.io/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Giuseppe Sutera Ph.D. – Academic Homepage">
+    <meta name="twitter:description" content="Assistant Professor at Kore University of Enna &amp; RoSys Group. Research in robotics, UAV, multi-robot systems and assistive devices.">
+    <meta name="twitter:image" content="https://peppegti.github.io/gallery/google.jpg">
+
     <link rel="icon" type="image/x-icon" href="icons/gs.ico">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js" integrity="sha384-/TQbtLCAerC3jgaim+N78RZSDYV7ryeoBCVqTuzRrFec2akfBkHS7ACQ3PQhvMVi" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Giuseppe Sutera",
+        "jobTitle": "Assistant Professor",
+        "affiliation": { "@type": "CollegeOrUniversity", "name": "Kore University of Enna" },
+        "url": "https://peppegti.github.io/",
+        "email": "mailto:giuseppe.sutera@unikore.it",
+        "sameAs": [
+            "https://github.com/PeppeGTi",
+            "https://linkedin.com/in/giuseppe-sutera",
+            "https://scholar.google.it/citations?user=ZBhhWt0AAAAJ",
+            "https://orcid.org/0000-0001-6424-6286"
+        ]
+    }
+    </script>
     <style>
         :root {
             --bg: #fcfcfc;
@@ -120,6 +151,8 @@
 
         footer { text-align: center; padding: 30px; background-color: var(--header); margin-top: 60px; font-size: 0.8rem; color: var(--muted); border-top: 1px solid #ddd; }
 
+        .load-error { color: var(--muted); font-style: italic; }
+
         @media (max-width: 768px) {
             header { flex-direction: column; text-align: center; padding: 20px; }
             .logo-lab { display: none; }
@@ -140,14 +173,14 @@
             <p>
                 <a class="lab-link" href="https://www.dieei.unict.it/faculty/giuseppe.sutera">Assistant Professor</a> |
                 <a class="lab-link" href="https://rosysgroup.github.io/">RoSys Group</a> - 
-                <a class="lab-link" href="https://www.dieei.unict.it/en">University of Catania</a>
+                <a class="lab-link" href="https://uke.it/didattica/dipartimenti/ingegneria-e-architettura">Università Kore di Enna</a>
             </p>
             <div class="social-links">
-                <a href="mailto:giuseppe.sutera@unict.it"><img src="icons/email.png" title="Email"></a>
-                <a href="https://github.com/PeppeGTi" target="_blank"><img src="icons/github.png" title="GitHub"></a>
-                <a href="https://linkedin.com/in/giuseppe-sutera" target="_blank"><img src="icons/linkedin.png" title="LinkedIn"></a>
-                <a href="https://scholar.google.it/citations?user=ZBhhWt0AAAAJ" target="_blank"><img src="icons/gs.png" title="Google Scholar"></a>
-                <a href="https://orcid.org/0000-0001-6424-6286" target="_blank"><img src="icons/orcid.png" title="ORCID"></a>
+                <a href="mailto:giuseppe.sutera@unikore.it"><img src="icons/email.png" title="Email" alt="Email"></a>
+                <a href="https://github.com/PeppeGTi" target="_blank"><img src="icons/github.png" title="GitHub" alt="GitHub"></a>
+                <a href="https://linkedin.com/in/giuseppe-sutera" target="_blank"><img src="icons/linkedin.png" title="LinkedIn" alt="LinkedIn"></a>
+                <a href="https://scholar.google.it/citations?user=ZBhhWt0AAAAJ" target="_blank"><img src="icons/gs.png" title="Google Scholar" alt="Google Scholar"></a>
+                <a href="https://orcid.org/0000-0001-6424-6286" target="_blank"><img src="icons/orcid.png" title="ORCID" alt="ORCID"></a>
             </div>
         </div>
     </div>
@@ -187,30 +220,36 @@
 <footer>&copy; 2025 Giuseppe Sutera – All rights reserved.</footer>
 
 <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const LOAD_ERROR_HTML = '<p class="load-error">Contenuto momentaneamente non disponibile.</p>';
+
     async function loadMD(id, file) {
+        const el = document.getElementById(id);
         try {
             const r = await fetch(file);
-            if (r.ok) {
-                const text = await r.text();
-                document.getElementById(id).innerHTML = marked.parse(text);
-            }
-        } catch (e) { console.error("Error loading MD:", file); }
+            if (!r.ok) throw new Error(`HTTP ${r.status}`);
+            const text = await r.text();
+            el.innerHTML = marked.parse(text);
+        } catch (e) {
+            console.error("Error loading MD:", file, e);
+            el.innerHTML = LOAD_ERROR_HTML;
+        }
     }
 
     async function loadPapers() {
+        const categories = { journal: 'journal-content', conference: 'conference-content' };
         try {
             const r = await fetch('content/papers.json');
-            if (!r.ok) return;
+            if (!r.ok) throw new Error(`HTTP ${r.status}`);
             const papers = await r.json();
-            const categories = { journal: 'journal-content', conference: 'conference-content' };
             Object.values(categories).forEach(id => document.getElementById(id).innerHTML = "");
 
             papers.forEach(p => {
                 const container = document.getElementById(categories[p.type]);
                 if(!container) return;
-                
+
                 const linksHtml = Object.entries(p.links).map(([l, u]) => `<a href="${u}" target="_blank">[${l}]</a>`).join("");
-                
+
                 // Grassetto flessibile per il nome
                 let authorsFormatted = p.authors
                     .replace("G. Sutera", "<strong>G. Sutera</strong>")
@@ -219,36 +258,42 @@
 
                 container.innerHTML += `
                     <div class="item-row">
-                        <img src="${p.image}" onerror="this.style.display='none'">
+                        <img src="${p.image}" alt="" onerror="this.onerror=null;this.src='gallery/paper/no_image_paper.png';">
                         <div class="item-text">
                             <h4>${p.title} - <span class="pub-links">${linksHtml}</span></h4>
                             <p class="pub-details">${authorsFormatted} - <em>${p.venue}</em></p>
                         </div>
                     </div>`;
             });
-        } catch (e) { console.error("Error loading Papers"); }
+        } catch (e) {
+            console.error("Error loading Papers", e);
+            Object.values(categories).forEach(id => document.getElementById(id).innerHTML = LOAD_ERROR_HTML);
+        }
     }
 
     async function loadWorkshops() {
+        const container = document.getElementById("workshops-content");
         try {
             const r = await fetch('content/workshops.json');
-            if (!r.ok) return;
+            if (!r.ok) throw new Error(`HTTP ${r.status}`);
             const workshops = await r.json();
-            const container = document.getElementById("workshops-content");
             container.innerHTML = "";
 
             workshops.forEach(w => {
                 const linksHtml = Object.entries(w.links || {}).map(([l, u]) => `<a href="${u}" target="_blank">[${l}]</a>`).join("");
                 container.innerHTML += `
                     <div class="item-row">
-                        <img src="${w.image}" onerror="this.style.display='none'">
+                        <img src="${w.image}" alt="" onerror="this.style.display='none'">
                         <div class="item-text">
                             <h4>${w.title} - <span class="pub-links">${linksHtml}</span></h4>
                             <p class="pub-details">${w.venue} (${w.year})</p>
                         </div>
                     </div>`;
             });
-        } catch (e) { console.error("Error loading Workshops"); }
+        } catch (e) {
+            console.error("Error loading Workshops", e);
+            container.innerHTML = LOAD_ERROR_HTML;
+        }
     }
 
     // Esecuzione
@@ -260,6 +305,7 @@
     loadMD("contact-content", "content/contact.md");
     loadPapers();
     loadWorkshops();
+});
 </script>
 </body>
 </html>
