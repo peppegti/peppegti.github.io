@@ -1,12 +1,19 @@
 [
-
+  {
+    "type": "journal",
+    "title": "Design and Development of a Polycentric Knee Exoskeleton",
+    "authors": "C. Finocchiaro, G. Sutera, D.C. Guastella, G. Muscato",
+    "venue": "Actuators, 2026",
+    "image": "gallery/paper/finocchiaro2026polycentric.png",
+    "links": { "PDF": "https://www.mdpi.com/2076-0825/15/8/419" }
+  },
   {
     "type": "journal",
     "title": "PostureSense: A Low-Cost Solution for Postural Monitoring",
     "authors": "N. Cinardi, G. Sutera, D.C. Guastella, G. Muscato",
     "venue": "Actuators, 2026",
     "image": "gallery/paper/cinardi2026posturesense.png",
-    "links": { "PDF": "https://scholar.google.it/citations?user=ZBhhWt0AAAAJ" }
+    "links": { "PDF": "https://www.mdpi.com/2076-0825/15/2/125" }
   },
   {
     "type": "journal",
